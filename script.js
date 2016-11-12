@@ -2,47 +2,54 @@ function isItManspreading(){
   var counter = 0;
   var threePoints = {};
   //display the first prompt
-  $(".text").append("<p>Click on left knee!");
+  $(".text").html("<p>Click on left knee!");
   //listen for clicks
-  $(".container").click(function(){
+  $(".img-field").click(function(event){
     //left knee
     if(counter === 0){
       //store the x and y values
       threePoints.leftKneeX = event.clientX;
-      threePoints.leftKneeY = event.clientY;
+      threePoints.leftKneeY = event.clientY-300;
       //prompt for next point
-      $(".text").append("<p>click on the crotch</p>");
+      $(".text").html("<p>Click on the crotch</p>");
     }
     //crotch
     else if(counter === 1){
       //store x and y values
       threePoints.crotchX = event.clientX;
-      threePoints.crotchY = event.clientY;
+      threePoints.crotchY = event.clientY-300;
       //prompt for next point
-      $(".text").append("<p>click on right knee</p>");
+      $(".text").html("<p>Click on right knee</p>");
     }
     //right knee
     else if(counter == 2){
       //store the x and y values
       threePoints.rightKneeX = event.clientX;
-      threePoints.rightKneeY = event.clientY;
+      threePoints.rightKneeY = event.clientY-300;
       //initiate the function that calculates the angle
       var angle = calculateAngle(threePoints);
       //trigger response to resulting angle
+      response(angle);
     }
     counter += 1;
   }); //closes the click function
 }//closes isItManspreading
 
-function calculateAngle(pointsObj) {
-  var AB = Math.sqrt(Math.pow((pointsObj.crotchX-pointsObj.leftKneeX),2)+ Math.pow((pointsObj.crotchY-pointsObj.leftKneeY),2));
-  var BC = Math.sqrt(Math.pow((pointsObj.crotchX-pointsObj.rightKneeX),2)+ Math.pow((pointsObj.crotchY-pointsObj.rightKneeY),2));
-  var AC = Math.sqrt(Math.pow((pointsObj.rightKneeX-pointsObj.leftKneeX),2)+ Math.pow((pointsObj.rightKneeY-pointsObj.leftKneeX),2));
-  var angleRad = Math.acos((BC*BC+AB*AB-AC*AC)/(2*BC*AB));
+function calculateAngle(Obj) {
+  console.log(Obj);
+  //legth between R knee and C
+  //take
+  var AB = Math.sqrt(Math.pow((Obj.crotchX-Obj.leftKneeX),2)+ Math.pow((Obj.crotchY-Obj.leftKneeY),2));
+  var BC = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
+  var AC = Math.sqrt(Math.pow((Obj.rightKneeX-Obj.leftKneeX),2)+ Math.pow((Obj.rightKneeY-Obj.leftKneeX),2));
+  console.log(AB + " " + BC + " " + AC);
+  var angleRad = Math.acos(((Math.pow(AB, 2)) + (Math.pow(BC, 2)) - (Math.pow(AC, 2))) / (2 * AB * BC));
+  console.log(angleRad);
   return angleRad * 180/Math.PI;
 }
 
 function response(degrees) {
+  console.log(degrees);
   if(degrees <= 30){
     //shy guy
   }
@@ -79,5 +86,6 @@ $(".get-url").submit(function(event) {
     alert("Invalid url, please try again");
     return false;
   }
-  $(".img-field").css("background-image", "url('"+imgURL+"')")
+  $(".img-field").css("background-image", "url('"+imgURL+"')");
+  isItManspreading();
 })

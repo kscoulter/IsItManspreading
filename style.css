@@ -10,7 +10,6 @@ h1.title {
 .img-field {
   height: 300px;
   width: 500px;
-  background-color: grey;
   background-image:     url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/01/14/09/Manspreading.jpg");
   background-size: cover;
   background-repeat: no-repeat;
