@@ -50,3 +50,16 @@ form input.submit{
     font-weight: bold;
     padding:15px 25px;
 }
+
+.modal {
+  display: none;
+  height: 100px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 2px solid black;
+}
