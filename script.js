@@ -39,9 +39,24 @@ function calculateAngle(Obj) {
   console.log(Obj);
   //legth between R knee and C
   //take
-  var AB = Math.sqrt(Math.pow((Obj.crotchX-Obj.leftKneeX),2)+ Math.pow((Obj.crotchY-Obj.leftKneeY),2));
-  var BC = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
+  // var AB = Math.sqrt(Math.pow((Obj.crotchX-Obj.leftKneeX),2)+ Math.pow((Obj.crotchY-Obj.leftKneeY),2));
+  // var BC = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
+  // var AC = Math.sqrt(Math.pow((Obj.rightKneeX-Obj.leftKneeX),2)+ Math.pow((Obj.rightKneeY-Obj.leftKneeX),2));
+
+//wrong
+  // var AB = Math.sqrt(Math.pow((Obj.rightKneeX-Obj.leftKneeX),2)+ Math.pow((Obj.rightKneeY-Obj.leftKneeX),2));
+  // var BC = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
+  // var AC = Math.sqrt(Math.pow((Obj.crotchX-Obj.leftKneeX),2)+ Math.pow((Obj.crotchY-Obj.leftKneeY),2));
+
+// wrong
+  // var AB = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
+  // var BC = Math.sqrt(Math.pow((Obj.rightKneeX-Obj.leftKneeX),2)+ Math.pow((Obj.rightKneeY-Obj.leftKneeX),2));
+  // var AC = Math.sqrt(Math.pow((Obj.crotchX-Obj.leftKneeX),2)+ Math.pow((Obj.crotchY-Obj.leftKneeY),2));
+
+  var AB = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
+  var BC = Math.sqrt(Math.pow((Obj.crotchX-Obj.leftKneeX),2)+ Math.pow((Obj.crotchY-Obj.leftKneeY),2));
   var AC = Math.sqrt(Math.pow((Obj.rightKneeX-Obj.leftKneeX),2)+ Math.pow((Obj.rightKneeY-Obj.leftKneeX),2));
+
   console.log(AB + " " + BC + " " + AC);
   var angleRad = Math.acos(((Math.pow(AB, 2)) + (Math.pow(BC, 2)) - (Math.pow(AC, 2))) / (2 * AB * BC));
   console.log(angleRad);
