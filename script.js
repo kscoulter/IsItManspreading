@@ -93,6 +93,7 @@ function response(degrees) {
 
 $(".get-url").submit(function(event) {
   event.preventDefault();
+  $(".modal").hide();
   var imgURL = $("input[name='url']").val();
   var re = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
   if (!re.test(imgURL)) {

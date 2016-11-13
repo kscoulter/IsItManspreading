@@ -1,7 +1,11 @@
 body {
   font-size: 18px;
+  background-color: #DFE2DB;
+  color: #191919;
+  margin: 0;
 }
 body h1 {
+  color: #3B3738;
   font-size: 50px;
 }
 h1.title {
@@ -18,10 +22,7 @@ h1.title {
   background-position: bottom center;
   margin: auto;
 }
-.text{
-  text-align: center;
-  margin: 15px auto 9px;
-}
+
 .text p {
   margin:0
 }
@@ -31,11 +32,21 @@ h1.title {
     font-size: 1.5em;
     font-style: italic;
     line-height: 1;
+    color: #026b61;
+}
+
+.text{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin: 15px auto 9px;
 }
 
 form {
   text-align: center;
   margin: 1em;
+  margin-bottom: 3em;
 }
 form input[type="text"] {
   border-radius: 6px;
@@ -49,34 +60,84 @@ form input[type="text"] {
 
 form input.submit{
     background: #2cbdf7; /* Old browsers */
-    background: linear-gradient(to bottom,  #2cbdf7 0%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to bottom,  #026b61 0%,#9adecf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border:0 none;
     border-radius: 8px;
     cursor:pointer;
     font-size: 2em;
     font-weight: bold;
+    margin: 10px 0 25px;
     padding:15px 25px;
+    width: 81%;
+}
+
+@media screen and (min-width: 850px){
+  form input[type="text"]{
+    width: 500px;
+  }
+  form input.submit{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 554px) {
+  div.img-field{
+    width: 100%;
+  }
+  h1.title{
+    font-size: 35px;
+  }
 }
 
 .modal {
+  background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+  border: 2px solid black;
   display: none;
   min-height: 100px;
   font-family: 'Shrikhand', cursive;
   margin: auto;
   text-align: center;
-  position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
-  background-color: white;
-  border: 2px solid black;
   font-size: 2em;
-  left: 14.5%;
-  width: 470px;
+  max-width: 470px;
+  position: relative;
 }
 
 .modal p {
   margin: 10% 0;
   text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #3B3738;
+  color: #FEFDFB;
+  text-align: center;
+}
+
+footer p {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
+div.social {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  margin: 5px;
+}
+div.social span{
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 3px;
+  text-align: center;
+  font-size: 25px;
+}
+div.social span:hover{
+  cursor: pointer;
 }
