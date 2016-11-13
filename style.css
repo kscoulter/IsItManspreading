@@ -9,6 +9,7 @@ body h1 {
   font-size: 50px;
 }
 h1.title {
+  margin-top: 45px;
   font-family: 'Shrikhand', cursive;
   text-align: center;
   margin-bottom: -15px;
@@ -131,7 +132,7 @@ div.social {
   right: 5px;
   margin: 5px;
 }
-div.social span{
+div.social a{
   color: #3B3738;
   width: 25px;
   height: 25px;
@@ -140,7 +141,8 @@ div.social span{
   text-align: center;
   font-size: 25px;
   background-color: #4ebdb3;
+  text-decoration: none;
 }
-div.social span:hover{
+div.social a:hover{
   cursor: pointer;
 }
