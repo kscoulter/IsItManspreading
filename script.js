@@ -61,7 +61,7 @@ function response(degrees) {
     //considerate man
     $(".modal").html("<p>Carry on, considerate man.</p>");
     $(".modal").show();
-    $(".lady-reaction").html("<img class='thumbsup' alt='blushing girl' src='thumbsup.png'/>");
+    $(".lady-reaction").html("<img class='thumbsup' alt='blushing girl' src='thumbsUp.png'/>");
   }
   else if (degrees <= 90) {
     //b-ball sprawl
