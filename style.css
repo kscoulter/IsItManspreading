@@ -1,8 +1,10 @@
 body {
   font-size: 18px;
+  font-family: 'Slabo 27px', serif;
   background-color: #DFE2DB;
   color: #191919;
   margin: 0;
+  letter-spacing: 2px;
 }
 body h1 {
   color: #3B3738;
@@ -70,6 +72,8 @@ form input.submit{
     margin: 10px 0 25px;
     padding:15px 25px;
     width: 81%;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 5px;
 }
 
 @media screen and (min-width: 850px){
@@ -144,4 +148,11 @@ div.social a{
 }
 div.social a:hover{
   cursor: pointer;
+}
+div.lady-reaction{
+  background-image: url("lady.png");
+  position: absolute;
+  right: 0;
+  width: 500px;
+  height: 500px;
 }
