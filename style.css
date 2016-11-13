@@ -62,18 +62,21 @@ form input[type="text"] {
 }
 
 form input.submit{
-    background: #026b61; /* Old browsers */
-    border:0 none;
-    border-radius: 8px;
-    color: #FEFDFB;
-    cursor:pointer;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 10px 0 25px;
-    padding:15px 25px;
-    width: 81%;
-    font-family: 'Slabo 27px', serif;
-    letter-spacing: 5px;
+  background: #026b61; /* Old browsers */
+  border:0 none;
+  border-radius: 8px;
+  color: #FEFDFB;
+  cursor:pointer;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0 25px;
+  padding:15px 25px;
+  width: 81%;
+  font-family: 'Slabo 27px', serif;
+  letter-spacing: 5px;
+}
+form input.submit:hover{
+  cursor: pointer;
 }
 
 @media screen and (min-width: 850px){
@@ -134,6 +137,7 @@ div.social {
   top: 5px;
   right: 5px;
   margin: 5px;
+  z-index: 3;
 }
 div.social a{
   color: #3B3738;
@@ -149,10 +153,29 @@ div.social a{
 div.social a:hover{
   cursor: pointer;
 }
-div.lady-reaction{
-  background-image: url("lady.png");
-  position: absolute;
+.lady-reaction{
+  position: fixed;
   right: 0;
-  width: 500px;
-  height: 500px;
+  bottom: 0;
+  z-index: 1;
+}
+.lady-reaction .bball{
+  width: 43vw;
+}
+.lady-reaction .angry {
+  width: 35vw;
+}
+.lady-reaction .shy {
+  width: 30vw;
+}
+.lady-reaction .thumbsup {
+  width: 35vw;
+}
+@media screen and (max-width: 500px) {
+  .lady-reaction .bball, .lady-reaction .shy {
+    width: 50vw;
+  }
+  .lady-reaction .angry, .lady-reaction .thumbsup {
+    width: 45vw;
+  }
 }

@@ -55,34 +55,37 @@ function response(degrees) {
     //shy guy
     $(".modal").html("<p>You're good, Shy Guy ;) </p>");
     $(".modal").show();
+    $(".lady-reaction").html("<img class='shy' alt='blushing girl' src='shy.png'/>");
   }
   else if (degrees <= 60) {
     //considerate man
     $(".modal").html("<p>Carry on, considerate man.</p>");
     $(".modal").show();
-
+    $(".lady-reaction").html("<img class='thumbsup' alt='blushing girl' src='thumbsup.png'/>");
   }
   else if (degrees <= 90) {
     //b-ball sprawl
     $(".modal").html("<p>You've got that b-ball sprawl.</p>");
     $(".modal").show();
-
+    $(".lady-reaction").html("<img class='bball' alt='blushing girl' src='bball.png'/>");
   }
   else if (degrees <= 120) {
     //come on, I can see your mooseknuckle
     $(".modal").html("<p>Come on, I can see your mooseknuckle!</p>");
     $(".modal").show();
-
+    $(".lady-reaction").html("<img class='angry' alt='blushing girl' src='angry.png'/>");
   }
   else if (degrees <= 150) {
     //are you kidding me?!
     $(".modal").html("<p>Are you kidding me?!</p>");
     $(".modal").show();
+    $(".lady-reaction").html("<img class='angry' alt='blushing girl' src='angry.png'/>");
   }
   else if (degrees <= 180) {
     //would you fuck me? I'd fuck me
     $(".modal").html("<p>\"Would you fuck me? I'd fuck me\"</p>");
     $(".modal").show();
+    $(".lady-reaction").html("<img class='angry' alt='blushing girl' src='angry.png'/>");
   }
   else {
     //what is wrong with you????
