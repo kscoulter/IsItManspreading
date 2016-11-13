@@ -63,6 +63,7 @@ form input.submit{
     background: linear-gradient(to bottom,  #026b61 0%,#9adecf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border:0 none;
     border-radius: 8px;
+    color: #3B3738;
     cursor:pointer;
     font-size: 2em;
     font-weight: bold;
@@ -131,12 +132,14 @@ div.social {
   margin: 5px;
 }
 div.social span{
+  color: #3B3738;
   width: 25px;
   height: 25px;
   border-radius: 5px;
   padding: 3px;
   text-align: center;
   font-size: 25px;
+  background-color: #4ebdb3;
 }
 div.social span:hover{
   cursor: pointer;
