@@ -2,7 +2,7 @@ function isItManspreading(){
   var counter = 0;
   var threePoints = {};
   //display the first prompt
-  $(".text").html("<p>Click on left knee!");
+  $(".text").html("<p>Click on left knee!</p>");
   //listen for clicks
   $(".img-field").click(function(event){
     //left knee
@@ -43,7 +43,6 @@ function calculateAngle(Obj) {
   var BC = Math.sqrt(Math.pow((Obj.crotchX-Obj.rightKneeX),2)+ Math.pow((Obj.crotchY-Obj.rightKneeY),2));
   var AC = Math.sqrt(Math.pow((Obj.rightKneeX-Obj.leftKneeX),2)+ Math.pow((Obj.rightKneeY-Obj.leftKneeY),2));
 
-  console.log("AB is "+AB + " BC is " + BC + " AC is " + AC);
   var angleRad = Math.acos(((Math.pow(AB, 2)) + (Math.pow(BC, 2)) - (Math.pow(AC, 2))) / (2 * AB * BC));
   console.log(angleRad);
   return angleRad * 180/Math.PI;
@@ -51,31 +50,31 @@ function calculateAngle(Obj) {
 
 function response(degrees) {
   console.log(degrees);
-  if(degrees <= 30){
+  if(degrees <= 50){
     //shy guy
     $(".modal").html("<p>You're good, Shy Guy ;) </p>");
     $(".modal").show();
     $(".lady-reaction").html("<img class='shy' alt='blushing girl' src='shy.png'/>");
   }
-  else if (degrees <= 60) {
+  else if (degrees <= 80) {
     //considerate man
     $(".modal").html("<p>Carry on, considerate man.</p>");
     $(".modal").show();
     $(".lady-reaction").html("<img class='thumbsup' alt='blushing girl' src='thumbsUp.png'/>");
   }
-  else if (degrees <= 90) {
+  else if (degrees <= 100) {
     //b-ball sprawl
     $(".modal").html("<p>You've got that b-ball sprawl.</p>");
     $(".modal").show();
     $(".lady-reaction").html("<img class='bball' alt='blushing girl' src='bball.png'/>");
   }
-  else if (degrees <= 120) {
+  else if (degrees <= 130) {
     //come on, I can see your mooseknuckle
     $(".modal").html("<p>Come on, I can see your mooseknuckle!</p>");
     $(".modal").show();
     $(".lady-reaction").html("<img class='angry' alt='blushing girl' src='angry.png'/>");
   }
-  else if (degrees <= 150) {
+  else if (degrees <= 160) {
     //are you kidding me?!
     $(".modal").html("<p>Are you kidding me?!</p>");
     $(".modal").show();
